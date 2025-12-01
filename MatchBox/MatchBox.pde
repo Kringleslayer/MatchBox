@@ -3,6 +3,7 @@ void setup() {
 }
 
 void draw() {
+  createGUI();
   //Hello kringle
   
   //hello
