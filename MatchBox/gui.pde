@@ -9,6 +9,7 @@
  void myBtnEvents(GButton button) { //_CODE_:button1:12356:
      // It is safe to enter your event code here  
  } //_CODE_:button1:12356:
+ 
  * Do not rename this tab!
  * =========================================================
  */
