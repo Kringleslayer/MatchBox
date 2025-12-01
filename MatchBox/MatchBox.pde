@@ -1,9 +1,10 @@
+import g4p_controls.*;
+
 void setup() {
-  println("Hello");
+  size(500, 400);
+  createGUI();
 }
 
 void draw() {
-  createGUI();
-  //Hello kringle
-
+  //background(126, 193, 241);
 }
