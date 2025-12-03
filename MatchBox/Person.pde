@@ -3,15 +3,16 @@ class Person {
   int age;
   String[] interests;
   String zodiac;
-  int height; // in cm
+  int points;
+  int Height; // in cm
   int weight; // in kg
 
-  Person(String name, int age, String interests, String zodiac, int height, int weight) {
+  Person(String name, int age, String interests, String zodiac, int Height, int weight) {
     this.name = name;
     this.age = age;
     this.interests = splitTokens(interests.toLowerCase(), ", ");
     this.zodiac = zodiac.toLowerCase().trim();
-    this.height = height;
+    this.Height = Height;
     this.weight = weight;
   }
 }
