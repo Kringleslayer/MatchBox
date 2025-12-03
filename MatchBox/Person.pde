@@ -5,6 +5,7 @@ class Person {
   String zodiac;
   int height; // in cm
   int weight; // in kg
+  int points; 
 
   Person(String name, int age, String interests, String zodiac, int height, int weight) {
     this.name = name;
@@ -14,4 +15,13 @@ class Person {
     this.height = height;
     this.weight = weight;
   }
-}
+
+ void calculatePoints() {
+   if(name.length() <= 6) {
+     points += 1;
+   }
+   elif( {
+     points  
+     
+     
+   
