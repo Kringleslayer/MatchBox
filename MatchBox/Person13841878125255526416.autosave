@@ -7,7 +7,6 @@ class Person {
   int Height; // in cm
   int weight; // in kg
   int points; 
-  boolean adult;
 
   Person(String name, int age, String interests, String zodiac, int Height, int weight) {
     this.name = name;
@@ -19,24 +18,11 @@ class Person {
   }
 
  void calculatePoints() {
-   if(name.length() >= 6) {
+   if(name.length() <= 6) {
      points += 1;
    }
-   else {
-     points += 2;
-   }
-   if(age > 18) {
-     adult = true;
-     points += 3;
-     
-     
-
-//void specialCases()
-     
-     
-     
-
-     
+   //elif( {
+   //  points  
      
      
    

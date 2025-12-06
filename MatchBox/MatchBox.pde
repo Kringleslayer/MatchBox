@@ -16,10 +16,10 @@ void draw() {
 
 void identifyProblems() {
   if (p1.points - p2.points <= 5 || p2.points - p1.points <= 5) {
-    println("You are absolutely adorabilicious! ");
+    println("You are absolutely adorablicious! ");
   }
   else if (p1.points - p2.points <= 8 || p2.points - p1.points <= 8) {
-    println("You are kawaii but not quite adorabilicious. ");
+    println("You are kawaii but not quite adorablicious. ");
   }
   else if (p1.points - p2.points <= 12 || p2.points - p1.points <= 12) {
     println("You are disappointing. ");
