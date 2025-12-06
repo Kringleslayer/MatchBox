@@ -24,7 +24,7 @@ class Person {
    
    // Name points
    if(name.length() >= 6) {
-     points += 5;
+     points += 10;
    }
    else {
      points += 2;
@@ -33,33 +33,33 @@ class Person {
    // Age points
    if(age > 18) {
      adult = true;
-     points += 10;
+     points += 20;
    } else {
      points += 5;
    }
    
    // Height points
-   if (Height > 180) points += 8;
-   else if (Height > 160) points += 4;
+   if (Height > 180) points += 15;
+   else if (Height > 160) points += 8;
    else points += 2;
    
    // Weight points
-   if (weight > 70) points += 6;
-   else if (weight > 50) points += 3;
+   if (weight > 70) points += 12;
+   else if (weight > 50) points += 6;
    else points += 1;
    
    // Interest points
-   points += interests.length * 3;
+   points += interests.length * 5;
    
    // Zodiac points
    if (zodiac.equals("aries") || zodiac.equals("leo") || zodiac.equals("sagittarius")) {
-     points += 8; // Fire signs
+     points += 20; // Fire signs
    } else if (zodiac.equals("cancer") || zodiac.equals("scorpio") || zodiac.equals("pisces")) {
-     points += 6; // Water signs
+     points += 15; // Water signs
    } else if (zodiac.equals("gemini") || zodiac.equals("libra") || zodiac.equals("aquarius")) {
-     points += 4; // Air signs
+     points += 10; // Air signs
    } else if (zodiac.equals("taurus") || zodiac.equals("virgo") || zodiac.equals("capricorn")) {
-     points += 2; // Earth signs
+     points += 5; // Earth signs
    }
  }
 }

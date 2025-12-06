@@ -15,19 +15,19 @@
  */
 
 public void StartButtonClick(GButton source, GEvent event) { //_CODE_:Start_Button:622067:
-  MatchBox_verables.setVisible(true);
+  MatchBox_variables.setVisible(true);
 } //_CODE_:Start_Button:622067:
 
 public void HelpButtonClick(GButton source, GEvent event) { //_CODE_:Help_Button:677148:
   println("Help_Button - GButton >> GEvent." + event + " @ " + millis());
 } //_CODE_:Help_Button:677148:
 
-synchronized public void win_draw1(PApplet appc, GWinData data) { //_CODE_:MatchBox_verables:938871:
+synchronized public void win_draw1(PApplet appc, GWinData data) { //_CODE_:MatchBox_variables:938871:
   appc.background(230);
   appc.fill(255, 0, 0);
   appc.textAlign(CENTER, CENTER);
   appc.text(mainErrorMsg, appc.width/2, 440);
-} //_CODE_:MatchBox_verables:938871:
+} //_CODE_:MatchBox_variables:938871:
 
 public void Name1_Change(GTextField source, GEvent event) { //_CODE_:Name1:726213:
   println("textfield1 - GTextField >> GEvent." + event + " @ " + millis());
@@ -61,7 +61,7 @@ public void Confirm_Click(GButton source, GEvent event) { //_CODE_:Confirm:83486
   if (catchErrors()) {
     getValues();
     identifyProblems();
-    MatchBox_verables.setVisible(false);
+    MatchBox_variables.setVisible(false);
   }
 } //_CODE_:Confirm:834868:
 
@@ -185,18 +185,18 @@ public void createGUI(){
   Help_Button = new GButton(this, 206, 197, 80, 30);
   Help_Button.setText("Help");
   Help_Button.addEventHandler(this, "HelpButtonClick");
-  MatchBox_verables = GWindow.getWindow(this, "Window title", 0, 0, 600, 500, JAVA2D);
-  MatchBox_verables.noLoop();
-  MatchBox_verables.setActionOnClose(G4P.KEEP_OPEN);
-  MatchBox_verables.addDrawHandler(this, "win_draw1");
-  MatchBox_verables.setVisible(false);
-  Name1 = new GTextField(MatchBox_verables, 90, 12, 120, 30, G4P.SCROLLBARS_NONE);
+  MatchBox_variables = GWindow.getWindow(this, "Window title", 0, 0, 600, 500, JAVA2D);
+  MatchBox_variables.noLoop();
+  MatchBox_variables.setActionOnClose(G4P.KEEP_OPEN);
+  MatchBox_variables.addDrawHandler(this, "win_draw1");
+  MatchBox_variables.setVisible(false);
+  Name1 = new GTextField(MatchBox_variables, 90, 12, 120, 30, G4P.SCROLLBARS_NONE);
   Name1.setOpaque(true);
   Name1.addEventHandler(this, "Name1_Change");
-  Name2 = new GTextField(MatchBox_verables, 390, 9, 120, 30, G4P.SCROLLBARS_NONE);
+  Name2 = new GTextField(MatchBox_variables, 390, 9, 120, 30, G4P.SCROLLBARS_NONE);
   Name2.setOpaque(true);
   Name2.addEventHandler(this, "Name2_Change");
-  Age1 = new GCustomSlider(MatchBox_verables, 52, 62, 196, 50, "grey_blue");
+  Age1 = new GCustomSlider(MatchBox_variables, 52, 62, 196, 50, "grey_blue");
   Age1.setShowValue(true);
   Age1.setShowLimits(true);
   Age1.setLimits(1, 0, 100);
@@ -205,7 +205,7 @@ public void createGUI(){
   Age1.setLocalColorScheme(GCScheme.RED_SCHEME);
   Age1.setOpaque(false);
   Age1.addEventHandler(this, "AgeSliderChange");
-  Age2 = new GCustomSlider(MatchBox_verables, 352, 63, 195, 50, "grey_blue");
+  Age2 = new GCustomSlider(MatchBox_variables, 352, 63, 195, 50, "grey_blue");
   Age2.setShowValue(true);
   Age2.setShowLimits(true);
   Age2.setLimits(1, 0, 100);
@@ -214,7 +214,7 @@ public void createGUI(){
   Age2.setLocalColorScheme(GCScheme.RED_SCHEME);
   Age2.setOpaque(false);
   Age2.addEventHandler(this, "custom_slider2_change1");
-  Height1 = new GCustomSlider(MatchBox_verables, 54, 135, 192, 50, "grey_blue");
+  Height1 = new GCustomSlider(MatchBox_variables, 54, 135, 192, 50, "grey_blue");
   Height1.setShowValue(true);
   Height1.setShowLimits(true);
   Height1.setLimits(50.0, 50.0, 300.0);
@@ -223,7 +223,7 @@ public void createGUI(){
   Height1.setLocalColorScheme(GCScheme.RED_SCHEME);
   Height1.setOpaque(false);
   Height1.addEventHandler(this, "HeightSliderChange");
-  Height2 = new GCustomSlider(MatchBox_verables, 350, 136, 199, 50, "grey_blue");
+  Height2 = new GCustomSlider(MatchBox_variables, 350, 136, 199, 50, "grey_blue");
   Height2.setShowValue(true);
   Height2.setShowLimits(true);
   Height2.setLimits(50.0, 50.0, 300.0);
@@ -232,7 +232,7 @@ public void createGUI(){
   Height2.setLocalColorScheme(GCScheme.RED_SCHEME);
   Height2.setOpaque(false);
   Height2.addEventHandler(this, "Height2SliderChange");
-  Weight1 = new GCustomSlider(MatchBox_verables, 53, 211, 194, 50, "grey_blue");
+  Weight1 = new GCustomSlider(MatchBox_variables, 53, 211, 194, 50, "grey_blue");
   Weight1.setShowValue(true);
   Weight1.setShowLimits(true);
   Weight1.setLimits(0.5, 0.0, 800.0);
@@ -241,10 +241,10 @@ public void createGUI(){
   Weight1.setLocalColorScheme(GCScheme.RED_SCHEME);
   Weight1.setOpaque(false);
   Weight1.addEventHandler(this, "WeightSliderChange");
-  Confirm = new GButton(MatchBox_verables, 260, 454, 80, 30);
+  Confirm = new GButton(MatchBox_variables, 260, 454, 80, 30);
   Confirm.setText("Confirm");
   Confirm.addEventHandler(this, "Confirm_Click");
-  Weight2 = new GCustomSlider(MatchBox_verables, 353, 210, 194, 50, "grey_blue");
+  Weight2 = new GCustomSlider(MatchBox_variables, 353, 210, 194, 50, "grey_blue");
   Weight2.setShowValue(true);
   Weight2.setShowLimits(true);
   Weight2.setLimits(0.5, 0.0, 800.0);
@@ -253,47 +253,47 @@ public void createGUI(){
   Weight2.setLocalColorScheme(GCScheme.RED_SCHEME);
   Weight2.setOpaque(false);
   Weight2.addEventHandler(this, "Weight2SliderChange");
-  WeightLabel1 = new GLabel(MatchBox_verables, 110, 190, 80, 20);
+  WeightLabel1 = new GLabel(MatchBox_variables, 110, 190, 80, 20);
   WeightLabel1.setTextAlign(GAlign.CENTER, GAlign.MIDDLE);
   WeightLabel1.setText("Weight");
   WeightLabel1.setOpaque(false);
-  WeightLabel2 = new GLabel(MatchBox_verables, 410, 194, 80, 20);
+  WeightLabel2 = new GLabel(MatchBox_variables, 410, 194, 80, 20);
   WeightLabel2.setTextAlign(GAlign.CENTER, GAlign.MIDDLE);
   WeightLabel2.setText("Weight");
   WeightLabel2.setOpaque(false);
-  HeightLabel1 = new GLabel(MatchBox_verables, 110, 117, 80, 20);
+  HeightLabel1 = new GLabel(MatchBox_variables, 110, 117, 80, 20);
   HeightLabel1.setTextAlign(GAlign.CENTER, GAlign.MIDDLE);
   HeightLabel1.setText("Height");
   HeightLabel1.setOpaque(false);
-  HeightLabel2 = new GLabel(MatchBox_verables, 410, 118, 80, 20);
+  HeightLabel2 = new GLabel(MatchBox_variables, 410, 118, 80, 20);
   HeightLabel2.setTextAlign(GAlign.CENTER, GAlign.MIDDLE);
   HeightLabel2.setText("Height");
   HeightLabel2.setOpaque(false);
-  AgeLabel1 = new GLabel(MatchBox_verables, 110, 46, 80, 20);
+  AgeLabel1 = new GLabel(MatchBox_variables, 110, 46, 80, 20);
   AgeLabel1.setTextAlign(GAlign.CENTER, GAlign.MIDDLE);
   AgeLabel1.setText("Age");
   AgeLabel1.setOpaque(false);
-  AgeLabel2 = new GLabel(MatchBox_verables, 410, 46, 80, 20);
+  AgeLabel2 = new GLabel(MatchBox_variables, 410, 46, 80, 20);
   AgeLabel2.setTextAlign(GAlign.CENTER, GAlign.MIDDLE);
   AgeLabel2.setText("Age");
   AgeLabel2.setOpaque(false);
-  Zodiac_Signs1 = new GButton(MatchBox_verables, 100, 399, 101, 30);
+  Zodiac_Signs1 = new GButton(MatchBox_variables, 100, 399, 101, 30);
   Zodiac_Signs1.setText("Zodiac Sign");
   Zodiac_Signs1.addEventHandler(this, "Zodiac_menuOpen");
-  Zodiac_Signs2 = new GButton(MatchBox_verables, 400, 399, 101, 30);
+  Zodiac_Signs2 = new GButton(MatchBox_variables, 400, 399, 101, 30);
   Zodiac_Signs2.setText("Zodiac Sign");
   Zodiac_Signs2.addEventHandler(this, "Zodiac_menuOpen2");
-  Intrests_Text1 = new GTextArea(MatchBox_verables, 66, 299, 167, 86, G4P.SCROLLBARS_NONE);
+  Intrests_Text1 = new GTextArea(MatchBox_variables, 66, 299, 167, 86, G4P.SCROLLBARS_NONE);
   Intrests_Text1.setOpaque(true);
   Intrests_Text1.addEventHandler(this, "IntrestsText_Change");
-  Intrests1 = new GLabel(MatchBox_verables, 110, 276, 80, 20);
+  Intrests1 = new GLabel(MatchBox_variables, 110, 276, 80, 20);
   Intrests1.setTextAlign(GAlign.CENTER, GAlign.MIDDLE);
   Intrests1.setText("Interests");
   Intrests1.setOpaque(false);
-  Intrests_Text2 = new GTextArea(MatchBox_verables, 364, 296, 171, 80, G4P.SCROLLBARS_NONE);
+  Intrests_Text2 = new GTextArea(MatchBox_variables, 364, 296, 171, 80, G4P.SCROLLBARS_NONE);
   Intrests_Text2.setOpaque(true);
   Intrests_Text2.addEventHandler(this, "IntrestsText2_Change");
-  Intrests2 = new GLabel(MatchBox_verables, 410, 276, 80, 20);
+  Intrests2 = new GLabel(MatchBox_variables, 410, 276, 80, 20);
   Intrests2.setTextAlign(GAlign.CENTER, GAlign.MIDDLE);
   Intrests2.setText("Interests");
   Intrests2.setOpaque(false);
@@ -365,7 +365,7 @@ public void createGUI(){
   ConfirmZodiac = new GButton(Zodiac_Signs, 110, 170, 80, 30);
   ConfirmZodiac.setText("Confirm");
   ConfirmZodiac.addEventHandler(this, "ConfirmZodiac_Click");
-  MatchBox_verables.loop();
+  MatchBox_variables.loop();
   Zodiac_Signs.loop();
 }
 
@@ -374,7 +374,7 @@ public void createGUI(){
 GButton Start_Button; 
 GLabel MatchBox_Title; 
 GButton Help_Button; 
-GWindow MatchBox_verables;
+GWindow MatchBox_variables;
 GTextField Name1; 
 GTextField Name2; 
 GCustomSlider Age1; 
