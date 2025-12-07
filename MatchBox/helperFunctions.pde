@@ -131,16 +131,16 @@ void identifyProblems() {
   
   println("Score Difference: " + diff);
 
-  if (diff <= 10) {
+  if (diff <= 5) {
     println("Verdict: You are absolutely adorablicious! A perfect match!");
   }
-  else if (diff <= 20) {
+  else if (diff <= 10) {
     println("Verdict: You are kawaii but not quite adorablicious. Good potential.");
   }
   else if (diff <= 30) {
-    println("Verdict: You are disappointing. It might take some work.");
+    println("Verdict: You are within reach. This might take some work.");
   }
-  else if (diff <= 40) {
+  else if (diff <= 50) {
     println("Verdict: Just give up. It's not looking good.");
   }
   else {
@@ -148,5 +148,3 @@ void identifyProblems() {
   }
   println("--------------------------------------------------");
 }
-
-
