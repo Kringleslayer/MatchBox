@@ -7,7 +7,7 @@ class Person {
   int Height; // in cm
   int weight; // in kg
   // int points; // Removed duplicate
-  boolean adult;
+  boolean adult; 
 
   Person(String name, int age, String interests, String zodiac, int Height, int weight) {
     this.name = name;
