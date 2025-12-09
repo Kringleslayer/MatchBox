@@ -10,9 +10,6 @@ import g4p_controls.*;
 void setup() {
   size(500, 400);
   createGUI();
-  MatchBox_verables.setVisible(false);
-  Zodiac_Signs.setVisible(false);
-  
 }
 
 void draw() {
