@@ -1,0 +1,39 @@
+class Person {
+  String name;
+  int age;
+  String[] interests;
+  String zodiac;
+  int height; // in cm
+  int weight; // in kg
+  int points; 
+  boolean adult;
+
+  Person(String name, int age, String interests, String zodiac, int height, int weight) {
+    this.name = name;
+    this.age = age;
+    this.interests = splitTokens(interests.toLowerCase(), ", ");
+    this.zodiac = zodiac.toLowerCase().trim();
+    this.height = height;
+    this.weight = weight;
+  }
+
+ void calculatePoints() {
+   if(name.length() >= 6) {
+     points += 1;
+   }
+   else {
+     points += 2;
+   }
+   if(age > 18) {
+     adult = true;
+     points += 3;
+
+void specialCases()
+     
+     
+     
+
+     
+     
+     
+   
