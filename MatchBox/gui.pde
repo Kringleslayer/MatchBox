@@ -15,14 +15,14 @@
  */
 
 public void StartButtonClick(GButton source, GEvent event) { //_CODE_:Start_Button:622067:
-  println("button - GButton >> GEvent." + event + " @ " + millis());
+  MatchBox_verables.setVisible(true);
 } //_CODE_:Start_Button:622067:
 
 public void HelpButtonClick(GButton source, GEvent event) { //_CODE_:Help_Button:677148:
   println("Help_Button - GButton >> GEvent." + event + " @ " + millis());
 } //_CODE_:Help_Button:677148:
 
-synchronized public void win_draw1(PApplet appc, GWinData data) { //_CODE_:MatchBox_verables:938871:
+synchronized public void win_draw2(PApplet appc, GWinData data) { //_CODE_:MatchBox_verables:938871:
   appc.background(230);
 } //_CODE_:MatchBox_verables:938871:
 
@@ -55,7 +55,7 @@ public void WeightSliderChange(GCustomSlider source, GEvent event) { //_CODE_:We
 } //_CODE_:Weight1:803483:
 
 public void Confirm_Click(GButton source, GEvent event) { //_CODE_:Confirm:834868:
-  println("Confirm - GButton >> GEvent." + event + " @ " + millis());
+  MatchBox_verables.setVisible(false);
 } //_CODE_:Confirm:834868:
 
 public void Weight2SliderChange(GCustomSlider source, GEvent event) { //_CODE_:Weight2:986884:
@@ -63,7 +63,7 @@ public void Weight2SliderChange(GCustomSlider source, GEvent event) { //_CODE_:W
 } //_CODE_:Weight2:986884:
 
 public void Zodiac_menuOpen(GButton source, GEvent event) { //_CODE_:Zodiac_Signs1:228585:
-  println("Zodiac_Signs1 - GButton >> GEvent." + event + " @ " + millis());
+  Zodiac_Signs.setVisible(true);
 } //_CODE_:Zodiac_Signs1:228585:
 
 public void IntrestsText_Change(GTextArea source, GEvent event) { //_CODE_:Intrests_Text1:268628:
@@ -74,7 +74,11 @@ public void IntrestsText2_Change(GTextArea source, GEvent event) { //_CODE_:Intr
   println("Intrests_Text2 - GTextArea >> GEvent." + event + " @ " + millis());
 } //_CODE_:Intrests_Text2:787686:
 
-synchronized public void win_draw2(PApplet appc, GWinData data) { //_CODE_:Zodiac_Signs:688374:
+public void Zodiac1_menuOpen(GButton source, GEvent event) { //_CODE_:ZodiacSigns2:630029:
+  Zodiac_Signs2.setVisible(true);
+} //_CODE_:ZodiacSigns2:630029:
+
+synchronized public void win_draw3(PApplet appc, GWinData data) { //_CODE_:Zodiac_Signs:688374:
   appc.background(230);
 } //_CODE_:Zodiac_Signs:688374:
 
@@ -127,8 +131,60 @@ public void Aries_Check(GCheckbox source, GEvent event) { //_CODE_:Aries:505733:
 } //_CODE_:Aries:505733:
 
 public void ConfirmZodiac_Click(GButton source, GEvent event) { //_CODE_:ConfirmZodiac:858276:
-  println("button1 - GButton >> GEvent." + event + " @ " + millis());
+  Zodiac_Signs.setVisible(false);
 } //_CODE_:ConfirmZodiac:858276:
+
+synchronized public void win_draw4(PApplet appc, GWinData data) { //_CODE_:Zodiac_Signs2:608000:
+  appc.background(230);
+} //_CODE_:Zodiac_Signs2:608000:
+
+public void Aries2_Check(GCheckbox source, GEvent event) { //_CODE_:Aries2:908950:
+  println("Aries2 - GCheckbox >> GEvent." + event + " @ " + millis());
+} //_CODE_:Aries2:908950:
+
+public void Taurus2_Check(GCheckbox source, GEvent event) { //_CODE_:Taurus2:769082:
+  println("Taurus2 - GCheckbox >> GEvent." + event + " @ " + millis());
+} //_CODE_:Taurus2:769082:
+
+public void Gemini2_Check(GCheckbox source, GEvent event) { //_CODE_:Gemini2:938377:
+  println("Gemini2 - GCheckbox >> GEvent." + event + " @ " + millis());
+} //_CODE_:Gemini2:938377:
+
+public void checkbox4_clicked1(GCheckbox source, GEvent event) { //_CODE_:checkbox4:468126:
+  println("checkbox4 - GCheckbox >> GEvent." + event + " @ " + millis());
+} //_CODE_:checkbox4:468126:
+
+public void checkbox5_clicked1(GCheckbox source, GEvent event) { //_CODE_:checkbox5:491705:
+  println("checkbox5 - GCheckbox >> GEvent." + event + " @ " + millis());
+} //_CODE_:checkbox5:491705:
+
+public void checkbox6_clicked1(GCheckbox source, GEvent event) { //_CODE_:Cancer:624293:
+  println("Cancer - GCheckbox >> GEvent." + event + " @ " + millis());
+} //_CODE_:Cancer:624293:
+
+public void checkbox7_clicked1(GCheckbox source, GEvent event) { //_CODE_:checkbox7:904883:
+  println("checkbox7 - GCheckbox >> GEvent." + event + " @ " + millis());
+} //_CODE_:checkbox7:904883:
+
+public void checkbox8_clicked1(GCheckbox source, GEvent event) { //_CODE_:checkbox8:782178:
+  println("checkbox8 - GCheckbox >> GEvent." + event + " @ " + millis());
+} //_CODE_:checkbox8:782178:
+
+public void checkbox9_clicked1(GCheckbox source, GEvent event) { //_CODE_:checkbox9:535963:
+  println("checkbox9 - GCheckbox >> GEvent." + event + " @ " + millis());
+} //_CODE_:checkbox9:535963:
+
+public void checkbox10_clicked1(GCheckbox source, GEvent event) { //_CODE_:checkbox10:753924:
+  println("checkbox10 - GCheckbox >> GEvent." + event + " @ " + millis());
+} //_CODE_:checkbox10:753924:
+
+public void checkbox11_clicked1(GCheckbox source, GEvent event) { //_CODE_:checkbox11:703168:
+  println("checkbox11 - GCheckbox >> GEvent." + event + " @ " + millis());
+} //_CODE_:checkbox11:703168:
+
+public void checkbox12_clicked1(GCheckbox source, GEvent event) { //_CODE_:checkbox12:940136:
+  println("checkbox12 - GCheckbox >> GEvent." + event + " @ " + millis());
+} //_CODE_:checkbox12:940136:
 
 
 
@@ -139,20 +195,20 @@ public void createGUI(){
   G4P.setGlobalColorScheme(GCScheme.BLUE_SCHEME);
   G4P.setMouseOverEnabled(false);
   surface.setTitle("Sketch Window");
-  Start_Button = new GButton(this, 207, 140, 80, 30);
+  Start_Button = new GButton(this, 207, 184, 80, 30);
   Start_Button.setText("Start");
   Start_Button.addEventHandler(this, "StartButtonClick");
-  MatchBox_Title = new GLabel(this, 160, 43, 174, 68);
+  MatchBox_Title = new GLabel(this, 159, 60, 178, 68);
   MatchBox_Title.setTextAlign(GAlign.CENTER, GAlign.MIDDLE);
   MatchBox_Title.setText("MatchBox");
   MatchBox_Title.setOpaque(false);
-  Help_Button = new GButton(this, 206, 197, 80, 30);
+  Help_Button = new GButton(this, 206, 268, 80, 30);
   Help_Button.setText("Help");
   Help_Button.addEventHandler(this, "HelpButtonClick");
   MatchBox_verables = GWindow.getWindow(this, "Window title", 0, 0, 600, 500, JAVA2D);
   MatchBox_verables.noLoop();
   MatchBox_verables.setActionOnClose(G4P.KEEP_OPEN);
-  MatchBox_verables.addDrawHandler(this, "win_draw1");
+  MatchBox_verables.addDrawHandler(this, "win_draw2");
   Name1 = new GTextField(MatchBox_verables, 88, 12, 120, 30, G4P.SCROLLBARS_NONE);
   Name1.setOpaque(true);
   Name1.addEventHandler(this, "Name1_Change");
@@ -253,10 +309,17 @@ public void createGUI(){
   Intrests_Text2 = new GTextArea(MatchBox_verables, 347, 296, 171, 80, G4P.SCROLLBARS_NONE);
   Intrests_Text2.setOpaque(true);
   Intrests_Text2.addEventHandler(this, "IntrestsText2_Change");
+  ZodiacSigns2 = new GButton(MatchBox_verables, 372, 399, 112, 30);
+  ZodiacSigns2.setText("ZodiacSigns");
+  ZodiacSigns2.addEventHandler(this, "Zodiac1_menuOpen");
+  Intrests2 = new GLabel(MatchBox_verables, 327, 273, 80, 20);
+  Intrests2.setTextAlign(GAlign.CENTER, GAlign.MIDDLE);
+  Intrests2.setText("Intrests");
+  Intrests2.setOpaque(false);
   Zodiac_Signs = GWindow.getWindow(this, "Window title", 0, 0, 300, 225, JAVA2D);
   Zodiac_Signs.noLoop();
   Zodiac_Signs.setActionOnClose(G4P.KEEP_OPEN);
-  Zodiac_Signs.addDrawHandler(this, "win_draw2");
+  Zodiac_Signs.addDrawHandler(this, "win_draw3");
   Pisces = new GCheckbox(Zodiac_Signs, 153, 132, 120, 20);
   Pisces.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
   Pisces.setText("Pisces");
@@ -287,12 +350,12 @@ public void createGUI(){
   Libra.setText("Libra");
   Libra.setOpaque(false);
   Libra.addEventHandler(this, "Libra_Check");
-  Virgo = new GCheckbox(Zodiac_Signs, 3, 133, 120, 20);
+  Virgo = new GCheckbox(Zodiac_Signs, 1, 132, 120, 20);
   Virgo.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
   Virgo.setText("Virgo");
   Virgo.setOpaque(false);
   Virgo.addEventHandler(this, "Virgo_Check");
-  Leo = new GCheckbox(Zodiac_Signs, 3, 110, 120, 20);
+  Leo = new GCheckbox(Zodiac_Signs, 2, 110, 120, 20);
   Leo.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
   Leo.setText("Leo");
   Leo.setOpaque(false);
@@ -320,8 +383,73 @@ public void createGUI(){
   ConfirmZodiac = new GButton(Zodiac_Signs, 102, 170, 80, 30);
   ConfirmZodiac.setText("Confirm");
   ConfirmZodiac.addEventHandler(this, "ConfirmZodiac_Click");
+  Zodiac_Signs2 = GWindow.getWindow(this, "Window title", 0, 0, 300, 225, JAVA2D);
+  Zodiac_Signs2.noLoop();
+  Zodiac_Signs2.setActionOnClose(G4P.KEEP_OPEN);
+  Zodiac_Signs2.addDrawHandler(this, "win_draw4");
+  Aries2 = new GCheckbox(Zodiac_Signs2, 6, 10, 120, 20);
+  Aries2.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  Aries2.setText("Aries");
+  Aries2.setOpaque(false);
+  Aries2.addEventHandler(this, "Aries2_Check");
+  Taurus2 = new GCheckbox(Zodiac_Signs2, 5, 36, 120, 20);
+  Taurus2.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  Taurus2.setText("Taurus");
+  Taurus2.setOpaque(false);
+  Taurus2.addEventHandler(this, "Taurus2_Check");
+  Gemini2 = new GCheckbox(Zodiac_Signs2, 5, 61, 120, 20);
+  Gemini2.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  Gemini2.setText("Gemini");
+  Gemini2.setOpaque(false);
+  Gemini2.addEventHandler(this, "Gemini2_Check");
+  checkbox4 = new GCheckbox(Zodiac_Signs2, 3, 135, 120, 20);
+  checkbox4.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  checkbox4.setText("checkbox text");
+  checkbox4.setOpaque(false);
+  checkbox4.addEventHandler(this, "checkbox4_clicked1");
+  checkbox5 = new GCheckbox(Zodiac_Signs2, 4, 110, 120, 20);
+  checkbox5.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  checkbox5.setText("checkbox text");
+  checkbox5.setOpaque(false);
+  checkbox5.addEventHandler(this, "checkbox5_clicked1");
+  Cancer = new GCheckbox(Zodiac_Signs2, 4, 85, 120, 20);
+  Cancer.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  Cancer.setText("checkbox text");
+  Cancer.setOpaque(false);
+  Cancer.addEventHandler(this, "checkbox6_clicked1");
+  checkbox7 = new GCheckbox(Zodiac_Signs2, 161, 87, 120, 20);
+  checkbox7.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  checkbox7.setText("checkbox text");
+  checkbox7.setOpaque(false);
+  checkbox7.addEventHandler(this, "checkbox7_clicked1");
+  checkbox8 = new GCheckbox(Zodiac_Signs2, 161, 63, 120, 20);
+  checkbox8.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  checkbox8.setText("checkbox text");
+  checkbox8.setOpaque(false);
+  checkbox8.addEventHandler(this, "checkbox8_clicked1");
+  checkbox9 = new GCheckbox(Zodiac_Signs2, 163, 38, 120, 20);
+  checkbox9.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  checkbox9.setText("checkbox text");
+  checkbox9.setOpaque(false);
+  checkbox9.addEventHandler(this, "checkbox9_clicked1");
+  checkbox10 = new GCheckbox(Zodiac_Signs2, 164, 11, 120, 20);
+  checkbox10.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  checkbox10.setText("checkbox text");
+  checkbox10.setOpaque(false);
+  checkbox10.addEventHandler(this, "checkbox10_clicked1");
+  checkbox11 = new GCheckbox(Zodiac_Signs2, 159, 112, 120, 20);
+  checkbox11.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  checkbox11.setText("checkbox text");
+  checkbox11.setOpaque(false);
+  checkbox11.addEventHandler(this, "checkbox11_clicked1");
+  checkbox12 = new GCheckbox(Zodiac_Signs2, 158, 134, 120, 20);
+  checkbox12.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  checkbox12.setText("checkbox text");
+  checkbox12.setOpaque(false);
+  checkbox12.addEventHandler(this, "checkbox12_clicked1");
   MatchBox_verables.loop();
   Zodiac_Signs.loop();
+  Zodiac_Signs2.loop();
 }
 
 // Variable declarations 
@@ -349,6 +477,8 @@ GButton Zodiac_Signs1;
 GTextArea Intrests_Text1; 
 GLabel Intrests1; 
 GTextArea Intrests_Text2; 
+GButton ZodiacSigns2; 
+GLabel Intrests2; 
 GWindow Zodiac_Signs;
 GCheckbox Pisces; 
 GCheckbox Aquarius; 
@@ -363,3 +493,16 @@ GCheckbox Gemini;
 GCheckbox Taurus; 
 GCheckbox Aries; 
 GButton ConfirmZodiac; 
+GWindow Zodiac_Signs2;
+GCheckbox Aries2; 
+GCheckbox Taurus2; 
+GCheckbox Gemini2; 
+GCheckbox checkbox4; 
+GCheckbox checkbox5; 
+GCheckbox Cancer; 
+GCheckbox checkbox7; 
+GCheckbox checkbox8; 
+GCheckbox checkbox9; 
+GCheckbox checkbox10; 
+GCheckbox checkbox11; 
+GCheckbox checkbox12; 
