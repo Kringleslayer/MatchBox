@@ -1,12 +1,10 @@
 Person p1;
 Person p2;
 int currentZodiacEditor = 0;
-int pointsDifference;
 String p1ZodiacSelection = "";
 String p2ZodiacSelection = "";
 String mainErrorMsg = "";
 String zodiacErrorMsg = "";
-int problemDiff = 0;
 
 boolean catchErrors() {
   if (Name1.getText().trim().equals("")) {
@@ -117,61 +115,36 @@ void identifyProblems() {
     println("Waiting for input... Please fill out the form and click Confirm.");
     return;
   }
-  problemDiff = 0;
-  int ageDiff = abs(p1.age - p2.age);
-  
 
-  println("Age Comparison:");
-  if (ageDiff <= 4) {
-    println("Very close in age (" + ageDiff + " years difference).");
-    println("You probably share similar life experiences and cultural norms");
-    problemDiff -= 5;
-  } else if (ageDiff <= 10) {
-    println("Medium age gap (" + ageDiff + " years difference).");
-    println("OK difference, but you may have differences in maturity or references");
-    problemDiff += 1;
-  } else if (ageDiff <= 20) {
-    println("Big age gap (" + ageDiff + " years difference).");
-    println("Be prepared for a different generation, friend groups, and views.");
-    problemDiff += 10;
-  }
-    else {
-      println("This is rather unusual...(" + ageDiff + " years difference).");
-      println("Perhaps find another person...");
-      problemDiff += 20;
-      
-  }
-   println("--------------------------------------------------");
+  println("--------------------------------------------------");
   println("Analyzing compatibility between " + p1.name + " and " + p2.name + "...");
-  println("(Closer is better)");
   println(p1.name + "'s Score: " + p1.points);
   println(p2.name + "'s Score: " + p2.points);
- int initialDiff = abs(p1.points - p2.points);
- println("Difference:" + initialDiff);
- pointsDifference = max(0, initialDiff + problemDiff);
- int finalDiff = pointsDifference;
- 
-  println("----------------------------------------------");
-  println("Problem Difference:" + problemDiff);
-  println("Total Difference (higher is worse): " + (finalDiff));
 
-  if (finalDiff <= 5) {
+  int diff = abs(p1.points - p2.points);
+  
+  // Bonus for matching zodiacs
+  if (p1.zodiac.equals(p2.zodiac) && !p1.zodiac.equals("")) {
+    println("Bonus! Matching zodiac signs (" + p1.zodiac + ") brings you closer together.");
+    diff = max(0, diff - 5); // Reduce difference by 5 points
+  }
+  
+  println("Score Difference: " + diff);
+
+  if (diff <= 5) {
     println("Verdict: You are absolutely adorablicious! A perfect match!");
   }
-  else if (finalDiff <= 10) {
+  else if (diff <= 10) {
     println("Verdict: You are kawaii but not quite adorablicious. Good potential.");
   }
-  else if (finalDiff <= 30) {
-    println("Verdict: You are within reach of each other. This might take some work.");
+  else if (diff <= 30) {
+    println("Verdict: You are within reach. This might take some work.");
   }
-  else if (finalDiff <= 50) {
+  else if (diff <= 50) {
     println("Verdict: Just give up. It's not looking good.");
   }
   else {
-    println("Verdict: Why are you even trying...? Surely there must be others");
+    println("Verdict: Why are you even trying? Total mismatch.");
   }
   println("--------------------------------------------------");
 }
-
-
-  
