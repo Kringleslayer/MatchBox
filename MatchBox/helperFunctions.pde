@@ -126,7 +126,7 @@ void identifyProblems() {
   // Bonus for matching zodiacs
   if (p1.zodiac.equals(p2.zodiac) && !p1.zodiac.equals("")) {
     println("Bonus! Matching zodiac signs (" + p1.zodiac + ") brings you closer together.");
-    diff = max(0, diff - 5); // Reduce difference by 5 points
+    diff = max(0, diff - 5); // Reduce difference by 5 points; Diff cant be negative, thus the max function
   }
   
   println("Score Difference: " + diff);
@@ -140,7 +140,7 @@ void identifyProblems() {
   else if (diff <= 30) {
     println("Verdict: You are within reach. This might take some work.");
   }
-  else if (diff <= 50) {
+  else if (diff <= 40) {
     println("Verdict: Just give up. It's not looking good.");
   }
   else {
