@@ -5,6 +5,9 @@ String p1ZodiacSelection = "";
 String p2ZodiacSelection = "";
 String mainErrorMsg = "";
 String zodiacErrorMsg = "";
+boolean showResults = false;
+boolean showHelp = false;
+String resultText = "";
 
 boolean catchErrors() {
   if (Name1.getText().trim().equals("")) {
@@ -116,35 +119,45 @@ void identifyProblems() {
     return;
   }
 
-  println("--------------------------------------------------");
-  println("Analyzing compatibility between " + p1.name + " and " + p2.name + "...");
-  println(p1.name + "'s Score: " + p1.points);
-  println(p2.name + "'s Score: " + p2.points);
+  String resultMessage = "";
+  resultMessage += "Analyzing compatibility between " + p1.name + " and " + p2.name + "...\n\n";
+  resultMessage += p1.name + "'s Score: " + p1.points + "\n";
+  resultMessage += p2.name + "'s Score: " + p2.points + "\n";
 
   int diff = abs(p1.points - p2.points);
   
   // Bonus for matching zodiacs
   if (p1.zodiac.equals(p2.zodiac) && !p1.zodiac.equals("")) {
-    println("Bonus! Matching zodiac signs (" + p1.zodiac + ") brings you closer together.");
+    resultMessage += "\nBonus! Matching zodiac signs (" + p1.zodiac + ") brings you closer together.\n";
     diff = max(0, diff - 5); // Reduce difference by 5 points; Diff cant be negative, thus the max function
   }
   
-  println("Score Difference: " + diff);
+  resultMessage += "\nScore Difference: " + diff + "\n\n";
 
   if (diff <= 5) {
-    println("Verdict: You are absolutely adorablicious! A perfect match!");
+    resultMessage += "Verdict: You are absolutely adorablicious! A perfect match!";
   }
   else if (diff <= 10) {
-    println("Verdict: You are kawaii but not quite adorablicious. Good potential.");
+    resultMessage += "Verdict: You are kawaii but not quite adorablicious. Good potential.";
   }
   else if (diff <= 30) {
-    println("Verdict: You are within reach. This might take some work.");
+    resultMessage += "Verdict: You are within reach. This might take some work.";
   }
   else if (diff <= 40) {
-    println("Verdict: Just give up. It's not looking good.");
+    resultMessage += "Verdict: Just give up. It's not looking good.";
   }
   else {
-    println("Verdict: Why are you even trying? Total mismatch.");
+    resultMessage += "Verdict: Why are you even trying? Total mismatch.";
   }
-  println("--------------------------------------------------");
+  
+  resultText = resultMessage;
+  showResults = true;
+  
+  // Hide main menu elements so they don't overlap results
+  Start_Button.setVisible(false);
+  Help_Button.setVisible(false);
+  MatchBox_Title.setVisible(false);
+  
+  // Also print to console for debugging
+  println(resultText);
 }

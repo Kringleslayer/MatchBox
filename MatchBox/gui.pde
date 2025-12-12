@@ -19,7 +19,10 @@ public void StartButtonClick(GButton source, GEvent event) { //_CODE_:Start_Butt
 } //_CODE_:Start_Button:622067:
 
 public void HelpButtonClick(GButton source, GEvent event) { //_CODE_:Help_Button:677148:
-  println("Help_Button - GButton >> GEvent." + event + " @ " + millis());
+  showHelp = true;
+  Start_Button.setVisible(false);
+  Help_Button.setVisible(false);
+  MatchBox_Title.setVisible(false);
 } //_CODE_:Help_Button:677148:
 
 synchronized public void win_draw1(PApplet appc, GWinData data) { //_CODE_:MatchBox_variables:938871:
@@ -30,31 +33,24 @@ synchronized public void win_draw1(PApplet appc, GWinData data) { //_CODE_:Match
 } //_CODE_:MatchBox_variables:938871:
 
 public void Name1_Change(GTextField source, GEvent event) { //_CODE_:Name1:726213:
-  println("textfield1 - GTextField >> GEvent." + event + " @ " + millis());
 } //_CODE_:Name1:726213:
 
 public void Name2_Change(GTextField source, GEvent event) { //_CODE_:Name2:873715:
-  println("textfield2 - GTextField >> GEvent." + event + " @ " + millis());
 } //_CODE_:Name2:873715:
 
 public void AgeSliderChange(GCustomSlider source, GEvent event) { //_CODE_:Age1:900375:
-  println("custom_slider1 - GCustomSlider >> GEvent." + event + " @ " + millis());
 } //_CODE_:Age1:900375:
 
 public void custom_slider2_change1(GCustomSlider source, GEvent event) { //_CODE_:Age2:887534:
-  println("custom_slider2 - GCustomSlider >> GEvent." + event + " @ " + millis());
 } //_CODE_:Age2:887534:
 
 public void HeightSliderChange(GCustomSlider source, GEvent event) { //_CODE_:Height1:390154:
-  println("custom_slider3 - GCustomSlider >> GEvent." + event + " @ " + millis());
 } //_CODE_:Height1:390154:
 
 public void Height2SliderChange(GCustomSlider source, GEvent event) { //_CODE_:Height2:855726:
-  println("custom_slider4 - GCustomSlider >> GEvent." + event + " @ " + millis());
 } //_CODE_:Height2:855726:
 
 public void WeightSliderChange(GCustomSlider source, GEvent event) { //_CODE_:Weight1:803483:
-  println("custom_slider5 - GCustomSlider >> GEvent." + event + " @ " + millis());
 } //_CODE_:Weight1:803483:
 
 public void Confirm_Click(GButton source, GEvent event) { //_CODE_:Confirm:834868:
@@ -66,7 +62,6 @@ public void Confirm_Click(GButton source, GEvent event) { //_CODE_:Confirm:83486
 } //_CODE_:Confirm:834868:
 
 public void Weight2SliderChange(GCustomSlider source, GEvent event) { //_CODE_:Weight2:986884:
-  println("Weight2 - GCustomSlider >> GEvent." + event + " @ " + millis());
 } //_CODE_:Weight2:986884:
 
 public void Zodiac_menuOpen(GButton source, GEvent event) { //_CODE_:Zodiac_Signs1:228585:
@@ -82,11 +77,9 @@ public void Zodiac_menuOpen2(GButton source, GEvent event) {
 }
 
 public void IntrestsText_Change(GTextArea source, GEvent event) { //_CODE_:Intrests_Text1:268628:
-  println("Intrests_Text1 - GTextArea >> GEvent." + event + " @ " + millis());
 } //_CODE_:Intrests_Text1:268628:
 
 public void IntrestsText2_Change(GTextArea source, GEvent event) { //_CODE_:Intrests_Text2:787686:
-  println("Intrests_Text2 - GTextArea >> GEvent." + event + " @ " + millis());
 } //_CODE_:Intrests_Text2:787686:
 
 synchronized public void win_draw2(PApplet appc, GWinData data) { //_CODE_:Zodiac_Signs:688374:
@@ -97,51 +90,39 @@ synchronized public void win_draw2(PApplet appc, GWinData data) { //_CODE_:Zodia
 } //_CODE_:Zodiac_Signs:688374:
 
 public void Pisces_Check(GCheckbox source, GEvent event) { //_CODE_:Pisces:306420:
-  println("checkbox1 - GCheckbox >> GEvent." + event + " @ " + millis());
 } //_CODE_:Pisces:306420:
 
 public void Aquarius_Check(GCheckbox source, GEvent event) { //_CODE_:Aquarius:365681:
-  println("checkbox2 - GCheckbox >> GEvent." + event + " @ " + millis());
 } //_CODE_:Aquarius:365681:
 
 public void Capriocorn_Check(GCheckbox source, GEvent event) { //_CODE_:Capricorn:628775:
-  println("checkbox3 - GCheckbox >> GEvent." + event + " @ " + millis());
 } //_CODE_:Capricorn:628775:
 
 public void Sagittarius_Check(GCheckbox source, GEvent event) { //_CODE_:Sagittarius:967765:
-  println("checkbox4 - GCheckbox >> GEvent." + event + " @ " + millis());
 } //_CODE_:Sagittarius:967765:
 
 public void Scorpio_Check(GCheckbox source, GEvent event) { //_CODE_:Scorpio:600549:
-  println("checkbox5 - GCheckbox >> GEvent." + event + " @ " + millis());
 } //_CODE_:Scorpio:600549:
 
 public void Libra_Check(GCheckbox source, GEvent event) { //_CODE_:Libra:921158:
-  println("checkbox6 - GCheckbox >> GEvent." + event + " @ " + millis());
 } //_CODE_:Libra:921158:
 
 public void Virgo_Check(GCheckbox source, GEvent event) { //_CODE_:Virgo:925655:
-  println("checkbox7 - GCheckbox >> GEvent." + event + " @ " + millis());
 } //_CODE_:Virgo:925655:
 
 public void Leo_Check(GCheckbox source, GEvent event) { //_CODE_:Leo:471669:
-  println("checkbox8 - GCheckbox >> GEvent." + event + " @ " + millis());
 } //_CODE_:Leo:471669:
 
 public void Cancer_Check(GCheckbox source, GEvent event) { //_CODE_:Cancer:232720:
-  println("checkbox9 - GCheckbox >> GEvent." + event + " @ " + millis());
 } //_CODE_:Cancer:232720:
 
 public void Gemini_Check(GCheckbox source, GEvent event) { //_CODE_:Gemini:258252:
-  println("checkbox10 - GCheckbox >> GEvent." + event + " @ " + millis());
 } //_CODE_:Gemini:258252:
 
 public void Taurus_Check(GCheckbox source, GEvent event) { //_CODE_:Taurus:867994:
-  println("checkbox11 - GCheckbox >> GEvent." + event + " @ " + millis());
 } //_CODE_:Taurus:867994:
 
 public void Aries_Check(GCheckbox source, GEvent event) { //_CODE_:Aries:505733:
-  println("checkbox12 - GCheckbox >> GEvent." + event + " @ " + millis());
 } //_CODE_:Aries:505733:
 
 public void ConfirmZodiac_Click(GButton source, GEvent event) { //_CODE_:ConfirmZodiac:858276:
