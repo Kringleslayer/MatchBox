@@ -1,13 +1,6 @@
 import g4p_controls.*;
 String helpText = "Welcome to MatchBox!\n\n1. Click Start to begin.\n2. Enter details for two people.\n3. Select their Zodiac signs.\n4. Click Confirm to see their compatibility score!";
 
-//Person p1 = new Person();
-//Person p2 = new Person();
-
-//String identifyProblems() {
-  //if 
-//}
-
 void setup() {
   size(500, 400);
   createGUI();

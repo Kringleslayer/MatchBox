@@ -6,7 +6,6 @@ class Person {
   int points;
   int Height; // in cm
   int weight; // in kg
-  // int points; // Removed duplicate
   boolean adult;
 
   Person(String name, int age, String interests, String zodiac, int Height, int weight) {
@@ -39,17 +38,17 @@ class Person {
    }
    
    // Height points
-   if (Height > 180) points += 15;
+   if (Height > 180 && Height < 240) points += 15;
    else if (Height > 160) points += 8;
    else points += 2;
    
    // Weight points
-   if (weight > 70) points += 12;
-   else if (weight > 50) points += 6;
-   else points += 1;
+   if (weight >= 90 && weight < 100) points += 12;
+   else if (weight > 50 && weight < 90) points += 6;
+   else points += 3;
    
    // Interest points
-   points += interests.length * 5;
+   points += interests.length * 5; //The more interests they have = more points
    
    // Zodiac points
    if (zodiac.equals("aries") || zodiac.equals("leo") || zodiac.equals("sagittarius")) {

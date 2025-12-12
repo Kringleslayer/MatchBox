@@ -118,36 +118,63 @@ void identifyProblems() {
     println("Waiting for input... Please fill out the form and click Confirm.");
     return;
   }
+  int problemDiff = 0;
+  int ageDiff = abs(p1.age - p2.age);
+  
+
+  println("Age Comparison:");
+  if (ageDiff <= 4) {
+    println("Very close in age (" + ageDiff + " years difference).");
+    println("You probably share similar life experiences and cultural norms");
+    problemDiff = max(0, problemDiff - 5);
+  } else if (ageDiff <= 10) {
+    println("Medium age gap (" + ageDiff + " years difference).");
+    println("OK difference, but you may have differences in maturity or references");
+    problemDiff = max(0, problemDiff + 3);
+  } else if (ageDiff <= 20) {
+    println("Big age gap (" + ageDiff + " years difference).");
+    println("Be prepared for a different generation, friend groups, and views.");
+    problemDiff = max(0, problemDiff + 6);
+  }
+    else {
+      println("This is rather unusual...(" + ageDiff + " years difference).");
+      println("Perhaps find another person");
+      problemDiff = max(0, problemDiff + 20);
+    }
+    
 
   String resultMessage = "";
   resultMessage += "Analyzing compatibility between " + p1.name + " and " + p2.name + "...\n\n";
   resultMessage += p1.name + "'s Score: " + p1.points + "\n";
   resultMessage += p2.name + "'s Score: " + p2.points + "\n";
-
-  int diff = abs(p1.points - p2.points);
+  resultMessage += "Closer scores to each other is Better\n";
+   int initialDiff = abs(p1.points - p2.points);
+   int pointsDifference = max(0, initialDiff + problemDiff);
+   int finalDiff = pointsDifference;
   
   // Bonus for matching zodiacs
   if (p1.zodiac.equals(p2.zodiac) && !p1.zodiac.equals("")) {
     resultMessage += "\nBonus! Matching zodiac signs (" + p1.zodiac + ") brings you closer together.\n";
-    diff = max(0, diff - 5); // Reduce difference by 5 points; Diff cant be negative, thus the max function
+    finalDiff = max(0, finalDiff - 5); // Reduce difference by 5 points; Diff cant be negative, thus the max function
   }
-  
-  resultMessage += "\nScore Difference: " + diff + "\n\n";
+  resultMessage += "\nInitial Difference:" + initialDiff;
+  resultMessage += "\nProblem Difference:" + problemDiff;
+  resultMessage += "\nFinal Score Difference: " + finalDiff + "\n";
 
-  if (diff <= 5) {
+  if (finalDiff <= 2) {
     resultMessage += "Verdict: You are absolutely adorablicious! A perfect match!";
   }
-  else if (diff <= 10) {
+  else if (finalDiff <= 5) {
     resultMessage += "Verdict: You are kawaii but not quite adorablicious. Good potential.";
   }
-  else if (diff <= 30) {
+  else if (finalDiff <= 10) {
     resultMessage += "Verdict: You are within reach. This might take some work.";
   }
-  else if (diff <= 40) {
+  else if (finalDiff <= 20) {
     resultMessage += "Verdict: Just give up. It's not looking good.";
   }
   else {
-    resultMessage += "Verdict: Why are you even trying? Total mismatch.";
+    resultMessage += "Verdict: Why are you even trying? Total Mismatch.";
   }
   
   resultText = resultMessage;
@@ -157,7 +184,7 @@ void identifyProblems() {
   Start_Button.setVisible(false);
   Help_Button.setVisible(false);
   MatchBox_Title.setVisible(false);
-  
-  // Also print to console for debugging
-  println(resultText);
 }
+
+
+  
