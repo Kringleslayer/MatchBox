@@ -12,7 +12,7 @@ void draw() {
   if (showResults) {
     // Draw background
     fill(255);
-    rect(50, 50, 400, 300, 10);
+    rect(50, 50, 400, 300, 40);
     
     // Draw text
     fill(0);
@@ -29,7 +29,7 @@ void draw() {
   if (showHelp) {
     // Draw background
     fill(255);
-    rect(50, 50, 400, 300, 10);
+    rect(50, 50, 400, 300, 40);
     
     // Draw text
     fill(0);
