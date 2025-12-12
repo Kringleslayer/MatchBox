@@ -6,7 +6,6 @@ class Person {
   int points;
   int Height; // in cm
   int weight; // in kg
-  // int points; // Removed duplicate
   boolean adult; 
 
   Person(String name, int age, String interests, String zodiac, int Height, int weight) {
