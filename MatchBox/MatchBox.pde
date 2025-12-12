@@ -10,38 +10,48 @@ void draw() {
   background(126, 193, 241);
   
   if (showResults) {
-    // Draw background
-    fill(255);
-    rect(50, 50, 400, 300, 10);
-    
-    // Draw text
-    fill(0);
-    textAlign(CENTER, CENTER);
-    textSize(14);
-    text(resultText, 70, 70, 360, 260);
-    
-    // make close line look subtler
-    textSize(12);
-    fill(100);
-    text("(Click anywhere to close)", width/2, 330);
+    drawPopup("Compatibility Results", resultText);
   }
   
   if (showHelp) {
-    // Draw background
-    fill(255);
-    rect(50, 50, 400, 300, 10);
-    
-    // Draw text
-    fill(0);
-    textAlign(CENTER, CENTER);
-    textSize(14);
-    text(helpText, 70, 70, 360, 260);
-    
-    // make close line look subtler
-    textSize(12);
-    fill(100);
-    text("(Click anywhere to close)", width/2, 330);
+    drawPopup("Help", helpText);
   }
+}
+
+void drawPopup(String title, String content) {
+  //shadow
+  fill(0, 50);
+  noStroke();
+  rect(55, 55, 400, 300, 12);
+  
+  // Main background
+  fill(250, 250, 255);
+  stroke(70, 130, 180);
+  strokeWeight(2);
+  rect(50, 50, 400, 300, 12);
+  
+  // Header bar
+  fill(70, 130, 180);
+  noStroke();
+  // Draw a rect for the header rounded corners
+  rect(51, 51, 399, 40, 10);
+  
+  // Title text
+  fill(255);
+  textAlign(CENTER, CENTER);
+  textSize(18);
+  text(title, width/2, 70);
+  
+  // Body text
+  fill(50);
+  textAlign(CENTER, CENTER);
+  textSize(14);
+  text(content, 70, 100, 360, 220);
+  
+  // Footer instruction
+  textSize(12);
+  fill(120);
+  text("(Click anywhere to close)", width/2, 335);
 }
 
 void mousePressed() {
